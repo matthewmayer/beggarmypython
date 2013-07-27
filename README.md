@@ -1,4 +1,4 @@
-Does an infinite game of [Beggar-My-Neighbour](http://en.wikipedia.org/wiki/Beggar-My-Neighbour) exist? 
+Does an infinite game of [Beggar-My-Neighbour](http://en.wikipedia.org/wiki/Beggar-My-Neighbour) exist? This question has definitely not plagued scientists for millennia. However, in the event that you think you have found a very long game of Beggar My Neighbour, you might wish to run it through a Beggar My Neighbour simulator written in Python.
 
 Usage:
 
