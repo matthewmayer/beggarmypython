@@ -9,7 +9,7 @@ def mutate(muts,trials):
     A = 'K-KK----K-A-----JAA--Q--J-'
     B = '---Q---Q-J-----J------AQ--'
     totalturns = 0
-    for t in range(trials):
+    for t in xrange(trials):
         h = list(A)+list(B)
         for i in range(muts):
             p = random.randint(0,52-1)
@@ -34,4 +34,4 @@ def mutate(muts,trials):
     return float(totalturns)/float(trials)
         
     
-print mutate(muts=12,trials=1000000000)
+print mutate(muts=12,trials=216*1000*1000)
