@@ -4,15 +4,17 @@ def penalty_value_of(card):
 
 def play(hands,firstCardOnLeft=True,verbose=False):
     a,b = hands #hands are called a and b
-    print "Starting hands: %s/%s" % (a,b)
+    a = list(a)
+    b = list(b)
+    #print "Starting hands: %s/%s" % (a,b)
     if not firstCardOnLeft:
         a.reverse()
         b.reverse()
-    stack = "" #cards in the middle
+    stack = list() #cards in the middle
     turns = 0
     tricks = 0
     player = 1 #alternates between 1 and -1
-    while a!="" and b!="": #game terminates when a or b's hands are empty
+    while len(a)>0 and len(b)>0: #game terminates when a or b's hands are empty
         battle_in_progress = False
         cards_to_play = 1
         while cards_to_play>0: #current player may play up to cards_to_play cards
@@ -21,16 +23,14 @@ def play(hands,firstCardOnLeft=True,verbose=False):
             try:
                 if player==1:
                     #grab next card from first character of string a
-                    next_card = a[0] 
-                    a = a[1:]
+                    next_card = a.pop(0)
                 else:
                     #grab next card from first character of string b
-                    next_card = b[0]
-                    b = b[1:]
+                    next_card = b.pop(0)
             except IndexError:
                 break #ran out of cards to play, game over...
             
-            stack = stack+next_card #add to the stack
+            stack.append(next_card) #add to the stack
             
             if next_card=='-':
                 #not a court card
@@ -48,17 +48,19 @@ def play(hands,firstCardOnLeft=True,verbose=False):
         tricks = tricks+1
         if player==1:
             b = b+stack 
-            stack = ''
+            stack = list()
         else:
             a = a+stack 
-            stack = ''
+            stack = list()
         
         
         player = player*-1
         
         #print current status
-        if verbose:
-            print "%s/%s/%s" % (a,b,stack)
+        #if verbose:
+            #print "%s/%s/%s" % (a,b,stack)
         
-    print "There were %d turns" % turns
-    print "There were %d tricks\n" % tricks
+    #print "There were %d turns" % turns
+    #print "There were %d tricks\n" % tricks
+    return (turns,tricks)
+    

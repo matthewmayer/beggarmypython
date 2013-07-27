@@ -1,17 +1,37 @@
 #!/usr/bin/python
 import beggarmypython
+import timeit
+import random
 
-print "Paulhus 1999:"
-beggarmypython.play(('------------KAQ----J------','-JQQK---K----JK--QA-A-JA--'),verbose=False)
+def mutate(muts,trials):
+   
+    
+    A = 'K-KK----K-A-----JAA--Q--J-'
+    B = '---Q---Q-J-----J------AQ--'
+    totalturns = 0
+    for t in range(trials):
+        h = list(A)+list(B)
+        for i in range(muts):
+            p = random.randint(0,52-1)
+            q = random.randint(0,52-1)
 
-print "Kleber 1999:"
-beggarmypython.play(('---JQ---K-A----A-J-K---QK-','-J-----------AJQA----K---Q'),verbose=False)
+            g = list(h)
+    
+            g[p]=h[q]
+            g[q]=h[p]
 
-print "Mann and Wu 2007:"
-beggarmypython.play(('K-KK----K-A-----JAA--Q--J-','---Q---Q-J-----J------AQ--'),verbose=False)
+            h = g 
 
-print "Nessler 2012:"
-beggarmypython.play(('----Q------A--K--A-A--QJK-','-Q--J--J---QK---K----JA---'),verbose=False)
 
-print "Anderson 2013:"
-beggarmypython.play(('--A-Q--J--J---Q--AJ-K---K-','-J-------Q------A--A--QKK-'),verbose=False)
+        h1 = h[0:26]
+        h2 = h[26:]
+
+        if h1!=list(A) or h2!=list(B):
+            (turns,tricks) = beggarmypython.play((h1,h2))
+            if turns>3000:
+                print str(turns)+":"+"".join(h1)+"/"+"".join(h2)
+            totalturns=totalturns+turns
+    return float(totalturns)/float(trials)
+        
+    
+print mutate(muts=12,trials=1000000000)
