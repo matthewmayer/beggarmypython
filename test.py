@@ -4,7 +4,7 @@ import timeit
 import random
 import boto
 
-TURNS_TO_LOG=1800
+TURNS_TO_LOG=5000
 
 def mutate(muts,trials):
    
