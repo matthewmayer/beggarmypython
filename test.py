@@ -2,6 +2,9 @@
 import beggarmypython
 import timeit
 import random
+import boto
+
+TURNS_TO_LOG=1800
 
 def mutate(muts,trials):
    
@@ -28,10 +31,17 @@ def mutate(muts,trials):
 
         if h1!=list(A) or h2!=list(B):
             (turns,tricks) = beggarmypython.play((h1,h2))
-            if turns>3000:
+            if turns>TURNS_TO_LOG:
+                
                 print str(turns)+":"+"".join(h1)+"/"+"".join(h2)
+                sns = boto.connect_sns()
+                sns.publish("arn:aws:sns:us-east-1:323036967201:bmn","Found "+str(turns),str(turns)+":"+"".join(h1)+"/"+"".join(h2))
+                
             totalturns=totalturns+turns
     return float(totalturns)/float(trials)
         
-    
-print mutate(muts=12,trials=216*1000*1000)
+sns = boto.connect_sns()
+sns.publish("arn:aws:sns:us-east-1:323036967201:bmn","Spinning up new instance","It begins...")   
+mutate(muts=12,trials=216*1000*1000)
+sns = boto.connect_sns()
+sns.publish("arn:aws:sns:us-east-1:323036967201:bmn","216 million tests complete","Complete")   
