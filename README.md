@@ -19,6 +19,11 @@ Starting hands: ---JQ---K-A----A-J-K---QK-/-J-----------AJQA----K---Q
 There were 5791 turns
 There were 805 tricks
 
+Collins 2006:
+Starting hands: A-QK------Q----KA-----J---/-JAK----A--Q----J---QJ--K-
+There were 6914 turns
+There were 960 tricks
+
 Mann and Wu 2007:
 Starting hands: K-KK----K-A-----JAA--Q--J-/---Q---Q-J-----J------AQ--
 There were 7157 turns

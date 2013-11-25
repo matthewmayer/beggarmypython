@@ -7,6 +7,9 @@ beggarmypython.play(('------------KAQ----J------','-JQQK---K----JK--QA-A-JA--'),
 print "Kleber 1999:"
 beggarmypython.play(('---JQ---K-A----A-J-K---QK-','-J-----------AJQA----K---Q'),verbose=False)
 
+print "Collins 2006:"
+beggarmypython.play(('A-QK------Q----KA-----J---','-JAK----A--Q----J---QJ--K-'),verbose=False)
+
 print "Mann and Wu 2007:"
 beggarmypython.play(('K-KK----K-A-----JAA--Q--J-','---Q---Q-J-----J------AQ--'),verbose=False)
 
