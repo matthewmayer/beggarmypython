@@ -1,4 +1,4 @@
-Does an infinite game of [Beggar-My-Neighbour](http://en.wikipedia.org/wiki/Beggar-My-Neighbour) exist? This question has definitely not plagued scientists for millennia. However, in the event that you think you have found a very long game of Beggar My Neighbour, you might wish to run it through a Beggar My Neighbour simulator written in Python.
+Does an infinite game of [Beggar-My-Neighbour](http://en.wikipedia.org/wiki/Beggar-My-Neighbour) exist? This question has definitely not plagued scientists for millennia. However, in the event that you think you have found a very long game of Beggar My Neighbour, you might wish to run it through a Beggar My Neighbour simulator written in Python. You can see a full list of record holders here: http://www.richardpmann.com/beggar-my-neighbour-records.html
 
 Usage:
 
@@ -38,4 +38,9 @@ Anderson 2013:
 Starting hands: --A-Q--J--J---Q--AJ-K---K-/-J-------Q------A--A--QKK-
 There were 7225 turns
 There were 1016 tricks
+
+Rucklidge 2014:
+Starting hands: -J------Q------AAA-----QQ-/K----JA-----------KQ-K-JJK
+There were 7960 turns
+There were 1122 tricks
 ````

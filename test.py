@@ -18,3 +18,6 @@ beggarmypython.play(('----Q------A--K--A-A--QJK-','-Q--J--J---QK---K----JA---'),
 
 print "Anderson 2013:"
 beggarmypython.play(('--A-Q--J--J---Q--AJ-K---K-','-J-------Q------A--A--QKK-'),verbose=False)
+
+print "Rucklidge 2014:"
+beggarmypython.play(('-J------Q------AAA-----QQ-','K----JA-----------KQ-K-JJK'), verbose=False)
