@@ -16,7 +16,6 @@ def play(hands,firstCardOnLeft=True,verbose=False):
         battle_in_progress = False
         cards_to_play = 1
         while cards_to_play>0: #current player may play up to cards_to_play cards
-            turns=turns+1
             
             try:
                 if player==1:
@@ -29,6 +28,8 @@ def play(hands,firstCardOnLeft=True,verbose=False):
                     b = b[1:]
             except IndexError:
                 break #ran out of cards to play, game over...
+			
+            turns=turns+1
             
             stack = stack+next_card #add to the stack
             
