@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import beggarmypython
 
+#test
+
 print "Paulhus 1999:"
 beggarmypython.play(('------------KAQ----J------','-JQQK---K----JK--QA-A-JA--'),verbose=False)
 
