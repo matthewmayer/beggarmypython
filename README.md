@@ -41,6 +41,6 @@ There were 1016 tricks
 
 Rucklidge 2014:
 Starting hands: -J------Q------AAA-----QQ-/K----JA-----------KQ-K-JJK
-There were 7960 turns
+There were 7959 turns
 There were 1122 tricks
 ````
