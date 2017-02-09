@@ -11,17 +11,17 @@ Output:
 ````
 Paulhus 1999:
 Starting hands: ------------KAQ----J------/-JQQK---K----JK--QA-A-JA--
-There were 4792 turns
+There were 4791 turns
 There were 670 tricks
 
 Kleber 1999:
 Starting hands: ---JQ---K-A----A-J-K---QK-/-J-----------AJQA----K---Q
-There were 5791 turns
+There were 5790 turns
 There were 805 tricks
 
 Collins 2006:
 Starting hands: A-QK------Q----KA-----J---/-JAK----A--Q----J---QJ--K-
-There were 6914 turns
+There were 6913 turns
 There were 960 tricks
 
 Mann and Wu 2007:
@@ -41,6 +41,6 @@ There were 1016 tricks
 
 Rucklidge 2014:
 Starting hands: -J------Q------AAA-----QQ-/K----JA-----------KQ-K-JJK
-There were 7960 turns
+There were 7959 turns
 There were 1122 tricks
 ````
