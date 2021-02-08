@@ -4,7 +4,7 @@ def penalty_value_of(card):
 
 def play(hands,firstCardOnLeft=True,verbose=False):
     a,b = hands #hands are called a and b
-    print "Starting hands: %s/%s" % (a,b)
+    print("Starting hands: %s/%s" % (a, b))
     if not firstCardOnLeft:
         a.reverse()
         b.reverse()
@@ -59,7 +59,7 @@ def play(hands,firstCardOnLeft=True,verbose=False):
         
         #print current status
         if verbose:
-            print "%s/%s/%s" % (a,b,stack)
-        
-    print "There were %d turns" % turns
-    print "There were %d tricks\n" % tricks
+            print("%s/%s/%s" % (a, b, stack))
+
+    print("There were %d turns" % turns)
+    print("There were %d tricks\n" % tricks)
