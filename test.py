@@ -21,3 +21,6 @@ beggarmypython.play(('--A-Q--J--J---Q--AJ-K---K-','-J-------Q------A--A--QKK-'),
 
 print("Rucklidge 2014:")
 beggarmypython.play(('-J------Q------AAA-----QQ-','K----JA-----------KQ-K-JJK'), verbose=False)
+
+print("Nessler 2021:")
+beggarmypython.play(('----K---A--Q-A--JJA------J','-----KK---------A-JK-Q-Q-Q'), verbose=False)
