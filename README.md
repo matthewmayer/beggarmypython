@@ -43,4 +43,9 @@ Rucklidge 2014:
 Starting hands: -J------Q------AAA-----QQ-/K----JA-----------KQ-K-JJK
 There were 7959 turns
 There were 1122 tricks
+
+Nessler 2021:
+Starting hands: ----K---A--Q-A--JJA------J/-----KK---------A-JK-Q-Q-Q
+There were 7972 turns
+There were 1106 tricks
 ````
