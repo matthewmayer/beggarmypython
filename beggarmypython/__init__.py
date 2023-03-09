@@ -12,7 +12,9 @@ def play(hands,firstCardOnLeft=True,verbose=False):
     turns = 0
     tricks = 0
     player = 1 #alternates between 1 and -1
-    while a!="" and b!="": #game terminates when a or b's hands are empty
+    finite = True
+    visited = set() #keep the visited statuses
+    while a!="" and b!="" and finite: #game terminates when a or b's hands are empty
         battle_in_progress = False
         cards_to_play = 1
         while cards_to_play>0: #current player may play up to cards_to_play cards
@@ -58,8 +60,15 @@ def play(hands,firstCardOnLeft=True,verbose=False):
         player = player*-1
         
         #print current status
+	status = "%s/%s/%s" % (a, b, stack)
         if verbose:
-            print("%s/%s/%s" % (a, b, stack))
+            print(status)
+	
+	#check for finiteness
+	if status in visited:
+            finite = False
+	else:
+            visited.add(status)
 
     print("There were %d turns" % turns)
     print("There were %d tricks\n" % tricks)
