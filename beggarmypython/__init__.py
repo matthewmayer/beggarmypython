@@ -3,6 +3,14 @@ def penalty_value_of(card):
     return values[card]
 
 def play(hands,firstCardOnLeft=True,verbose=False):
+    (turns, tricks, finite) = calculate(hands,firstCardOnLeft,verbose)
+    if finite:
+        print("There were %d turns" % turns)
+        print("There were %d tricks\n" % tricks)
+    else:
+        print("Game appears to be infinite, loop detected after %d turns and %d tricks" % (turns, tricks))
+
+def calculate(hands,firstCardOnLeft=True,verbose=False):
     a,b = hands #hands are called a and b
     print("Starting hands: %s/%s" % (a, b))
     if not firstCardOnLeft:
@@ -60,15 +68,13 @@ def play(hands,firstCardOnLeft=True,verbose=False):
         player = player*-1
         
         #print current status
-	status = "%s/%s/%s" % (a, b, stack)
+        status = "%s/%s/%s" % (a, b, stack)
         if verbose:
             print(status)
 	
-	#check for finiteness
-	if status in visited:
+        #check for finiteness
+        if status in visited:
             finite = False
-	else:
+        else:
             visited.add(status)
-
-    print("There were %d turns" % turns)
-    print("There were %d tricks\n" % tricks)
+    return (turns, tricks, finite)

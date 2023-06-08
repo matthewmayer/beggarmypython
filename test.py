@@ -27,3 +27,6 @@ beggarmypython.play(('----K---A--Q-A--JJA------J','-----KK---------A-JK-Q-Q-Q'),
 
 print("Nessler 2022:")
 beggarmypython.play(('---AJ--Q---------QAKQJJ-QK','-----A----KJ-K--------A---'), verbose=False)
+
+print("Carmicia")
+beggarmypython.play(('--Q------QJ----JK---','---Q---J-Q-KJ--K-K--'))

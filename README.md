@@ -54,3 +54,12 @@ Starting hands: ---AJ--Q---------QAKQJJ-QK/-----A----KJ-K--------A---
 There were 8344 turns
 There were 1164 tricks
 ````
+
+There are [alternate versions of the game](https://github.com/matthewmayer/beggarmypython/pull/5) that do not terminate, entering an infinite loop. For example the Italian game of Camicia uses a 40-card deck and no draw-4 cards (aces).
+
+```
+Carmicia
+Starting hands: --J------QJ----JK---/---Q---J-Q-KJ--K-K--
+There were 98 turns
+There were 16 tricks
+```
