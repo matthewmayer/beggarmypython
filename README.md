@@ -1,4 +1,4 @@
-Does an infinite game of [Beggar-My-Neighbour](http://en.wikipedia.org/wiki/Beggar-My-Neighbour) exist? This question has definitely not plagued scientists for millennia. However, in the event that you think you have found a very long game of Beggar My Neighbour, you might wish to run it through a Beggar My Neighbour simulator written in Python. You can see a full list of record holders here: http://www.richardpmann.com/beggar-my-neighbour-records.html
+Does an infinite game of [Beggar-My-Neighbour](http://en.wikipedia.org/wiki/Beggar-My-Neighbour) exist? This question has definitely not plagued scientists for millennia. However, in the event that you think you have found a very long game of Beggar My Neighbour, you might wish to run it through a Beggar My Neighbour simulator written in Python. You can see a full list of record holders here: http://richardpmann.weebly.com/beggar-my-neighbour-records.html 
 
 Usage:
 
@@ -48,4 +48,9 @@ Nessler 2021:
 Starting hands: ----K---A--Q-A--JJA------J/-----KK---------A-JK-Q-Q-Q
 There were 7972 turns
 There were 1106 tricks
+
+Nessler 2022:
+Starting hands: ---AJ--Q---------QAKQJJ-QK/-----A----KJ-K--------A---
+There were 8344 turns
+There were 1164 tricks
 ````
