@@ -59,7 +59,6 @@ There are [alternate versions of the game](https://github.com/matthewmayer/begga
 
 ```
 Carmicia
-Starting hands: --J------QJ----JK---/---Q---J-Q-KJ--K-K--
-There were 98 turns
-There were 16 tricks
+Starting hands: --Q------QJ----JK---/---Q---J-Q-KJ--K-K--
+Game appears to be infinite, loop detected after 197 turns and 37 tricks
 ```
