@@ -62,3 +62,6 @@ Carmicia
 Starting hands: --Q------QJ----JK---/---Q---J-Q-KJ--K-K--
 Game appears to be infinite, loop detected after 197 turns and 37 tricks
 ```
+
+While this Python code is fine for verifying a single game, if you wish to test large numbers of games to beat the current records, you almost certainly want to use a faster compiled language. 
+* https://github.com/LeoDog896/beggar-my-neighbour (uses Rust)
