@@ -1,4 +1,10 @@
-Does an infinite game of [Beggar-My-Neighbour](http://en.wikipedia.org/wiki/Beggar-My-Neighbour) exist? This question has definitely not plagued scientists for millennia. However, in the event that you think you have found a very long game of Beggar My Neighbour, you might wish to run it through a Beggar My Neighbour simulator written in Python. You can see a full list of record holders here: http://richardpmann.weebly.com/beggar-my-neighbour-records.html 
+Does an infinite game of [Beggar-My-Neighbour](http://en.wikipedia.org/wiki/Beggar-My-Neighbour) exist? 
+
+Yes!
+
+This question has definitely not plagued scientists for millennia. However, in the event that you think you have found a very long game of Beggar My Neighbour, you might wish to run it through a Beggar My Neighbour simulator written in Python. You can see a full list of record holders here: http://richardpmann.weebly.com/beggar-my-neighbour-records.html 
+
+In 2024, Brayden Casella finally found an infinite game. You can read about his methodology in [this paper](https://arxiv.org/abs/2403.13855).
 
 Usage:
 
@@ -53,10 +59,20 @@ Nessler 2022:
 Starting hands: ---AJ--Q---------QAKQJJ-QK/-----A----KJ-K--------A---
 There were 8344 turns
 There were 1164 tricks
+
+Brayden Casella 2024:
+Starting hands: ---K---Q-KQAJ-----AAJ--J--/----------Q----KQ-J-----KA
+Game appears to be infinite, loop detected after 474 turns and 66 tricks
 ````
 
-There are [alternate versions of the game](https://github.com/matthewmayer/beggarmypython/pull/5) that do not terminate, entering an infinite loop. For example the Italian game of Camicia uses a 40-card deck and no draw-4 cards (aces).
+If you care about the non-court cards then you have to wait longer for the loop to occur. Passing the `substituteValuesForNonCourtCards` flag lets you quickly test this by replacing the - with greek and cyrillic letters.
+````
+Including unique non-court cards:
+Starting hands: αβγKδεζQηKQAJθιλμνAAJξοJπρ/αβγδεζηθιλQμνξοKQπJρστυφKA
+Game appears to be infinite, loop detected after 33034 turns and 4654 tricks
+````
 
+We already knew about [alternate versions of the game](https://github.com/matthewmayer/beggarmypython/pull/5) that do not terminate, entering an infinite loop. For example the Italian game of Camicia uses a 40-card deck and no draw-4 cards (aces).
 ```
 Carmicia
 Starting hands: --Q------QJ----JK---/---Q---J-Q-KJ--K-K--
