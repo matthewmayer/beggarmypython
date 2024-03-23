@@ -43,6 +43,6 @@ print("Brayden Casella 2024:")
 beggarmypython.play(('---K---Q-KQAJ-----AAJ--J--',
                     '----------Q----KQ-J-----KA'), verbose=False)
 
-print("Including unique non-court cards:")
+print("\nIncluding unique non-court cards:")
 beggarmypython.play(('---K---Q-KQAJ-----AAJ--J--',
                     '----------Q----KQ-J-----KA'), verbose=False, substituteValuesForNonCourtCards=True)

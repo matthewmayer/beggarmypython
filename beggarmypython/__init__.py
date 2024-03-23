@@ -21,13 +21,17 @@ def play(hands, firstCardOnLeft=True, verbose=False, substituteValuesForNonCourt
         a, b = hands
         hands = (substitute(a), substitute(b))
 
-    (turns, tricks, finite) = calculate(hands, firstCardOnLeft, verbose)
+    (turns, tricks, finite, loopData) = calculate(
+        hands, firstCardOnLeft, verbose)
     if finite:
         print("There were %d turns" % turns)
         print("There were %d tricks\n" % tricks)
     else:
         print("Game appears to be infinite, loop detected after %d turns and %d tricks" % (
             turns, tricks))
+        (startTurn, startTrick) = loopData
+        print("- the loop is %d turns and %d tricks long" %
+              (turns-startTurn, tricks-startTrick))
 
 
 def calculate(hands, firstCardOnLeft=True, verbose=False):
@@ -42,6 +46,7 @@ def calculate(hands, firstCardOnLeft=True, verbose=False):
     player = 1  # alternates between 1 and -1
     finite = True
     visited = set()  # keep the visited statuses
+    visitedmap = {}
     while a != "" and b != "" and finite:  # game terminates when a or b's hands are empty
         battle_in_progress = False
         cards_to_play = 1
@@ -97,4 +102,5 @@ def calculate(hands, firstCardOnLeft=True, verbose=False):
             finite = False
         else:
             visited.add(status)
-    return (turns, tricks, finite)
+            visitedmap[status] = (turns, tricks)
+    return (turns, tricks, finite, visitedmap[status])
