@@ -68,6 +68,8 @@ def calculate(hands, firstCardOnLeft=True, verbose=False):
 
             stack = stack+next_card  # add to the stack
 
+            if not b or not a: break
+
             if next_card not in ['A', 'K', 'Q', 'J']:
                 # not a court card
                 if battle_in_progress:
